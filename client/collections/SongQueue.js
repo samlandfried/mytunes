@@ -9,7 +9,7 @@ var SongQueue = Backbone.Collection.extend({
       if ( this.length === 1 ) {
         this.playFirst(this.models[0]);
       }
-    })
+    });
   },
 
   playFirst: function(song) {
