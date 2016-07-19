@@ -4,13 +4,8 @@ var Songs = Backbone.Collection.extend({
   model: SongModel,
 
   initialize: function () {
-    $.get('https://api.parse.com/1/classes/songs/', data => this.buildLibrary(data.results));
-  },
-
-  buildLibrary: data => {
-    var self = this;
-    console.log(self);
+    $.get('https://api.parse.com/1/classes/songs/', data => {
+      this.reset(data.results);
+    });
   }
-    
-
 });

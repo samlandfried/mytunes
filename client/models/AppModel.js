@@ -22,5 +22,4 @@ var AppModel = Backbone.Model.extend({
       sQ.add(song);
     }, this);
   }
-
 });
