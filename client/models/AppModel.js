@@ -21,10 +21,6 @@ var AppModel = Backbone.Model.extend({
     params.library.on('enqueue', function(song) {
       sQ.add(song);
     }, this);
-
-    params.library.on('ended', function () {
-      console.log('event listener in app model');
-    }, this);
   }
 
 });

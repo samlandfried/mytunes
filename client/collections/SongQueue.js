@@ -5,7 +5,7 @@ var SongQueue = Backbone.Collection.extend({
 
   // When does this fire? When a song is added, or when its first created? Im betting created.
   initialize: function() {
-    this.on('add', function () {
+    this.on('add remove', function () {
       if ( this.length === 1 ) {
         this.playFirst();
       }
@@ -19,8 +19,8 @@ var SongQueue = Backbone.Collection.extend({
     });
 
     this.on('dequeue', function (song) {
-      this.remove(this.at(this.get(song.cid)));
-    });
+      this.remove(this.get(song.cid));
+    }, this);
   },
 
   playFirst: function() {
