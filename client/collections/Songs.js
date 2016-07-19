@@ -8,7 +8,7 @@ var Songs = Backbone.Collection.extend({
       data.results.map(song => {
         song.playCount = 0;
         return song;
-      })
+      });
       this.reset(data.results);
     });
   }
