@@ -11,5 +11,9 @@ var Songs = Backbone.Collection.extend({
       });
       this.reset(data.results);
     });
+  },
+
+  search: function (query) {
+    console.log(query);
   }
 });
