@@ -7,7 +7,6 @@ var SearchView = Backbone.View.extend({
       </form>`,
 
   initialize: function() {
-    console.log(this.$el.children('.searchbutton'));
     this.$el.submit(event => {
       event.preventDefault();
       this.collection.search(event.target[0].value);
