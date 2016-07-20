@@ -7,6 +7,7 @@ var PlayerView = Backbone.View.extend({
 
   initialize: function() {
     // TODO: Figure ot how to do this without reassigning this
+    console.log(this)
     var self = this;
     this.$el.on('ended', function() {
       self.model.ended();
