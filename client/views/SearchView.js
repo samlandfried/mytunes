@@ -1,6 +1,10 @@
 var SearchView = Backbone.View.extend({
 
-  el: '<input type="text" name="search">',
+  el: `<form>
+        <input type="text" class="search">
+        <input type="submit" value="Search" class="search">
+        <br>
+      </form>`,
 
   render: () => this.$el
 });
