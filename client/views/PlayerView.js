@@ -6,6 +6,7 @@ var PlayerView = Backbone.View.extend({
   el: '<audio controls autoplay />',
 
   initialize: function() {
+    // TODO: Figure ot how to do this without reassigning this
     var self = this;
     this.$el.on('ended', function() {
       self.model.ended();
